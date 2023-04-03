@@ -47,10 +47,9 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="213dp"
-        android:layout_height="185dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        android:layout_width="187dp"
+        android:layout_height="195dp"
+        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/giveEmail">
 
@@ -83,14 +82,13 @@
         android:id="@+id/addKaiffar"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:onClick="addKaiffar"
         android:text="Lisää käyttäjä"
         android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/uimaMaisteriCheckBox" />
 
     <Button
         android:id="@+id/listKaiffars"
@@ -99,7 +97,40 @@
         android:onClick="switchToListUsers"
         android:text="Listaa käyttäjät"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addKaiffar" />
+
+    <CheckBox
+        android:id="@+id/kandiCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kandidaatin tutkinto"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/giveEmail" />
+
+    <CheckBox
+        android:id="@+id/diCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diplomi-insinöörin tutkinto"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/kandiCheckBox" />
+
+    <CheckBox
+        android:id="@+id/docCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tekniikan tohtorin tutkinto"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/diCheckBox" />
+
+    <CheckBox
+        android:id="@+id/uimaMaisteriCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uimamaisteri"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/docCheckBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
